@@ -1,0 +1,324 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ForeNest Uganda</title>
+<link rel="icon" href="logo.png" type="image/png">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, #031c24, #001c24);
+    color:white;
+}
+
+/* ================= NAVBAR ================= */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 8%;
+    position:relative;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#2dd6f5;
+}
+
+.sign-btn{
+    background:#0e4f5c;
+    padding:10px 22px;
+    border-radius:25px;
+    text-decoration:none;
+    color:white;
+}
+
+/* Hamburger */
+.menu-toggle{
+    display:none;
+    flex-direction:column;
+    gap:6px;
+    cursor:pointer;
+}
+
+.menu-toggle span{
+    width:26px;
+    height:3px;
+    background:white;
+    transition:0.3s;
+}
+
+.menu-toggle.active span:nth-child(1){
+    transform:rotate(45deg) translate(5px,5px);
+}
+.menu-toggle.active span:nth-child(2){
+    opacity:0;
+}
+.menu-toggle.active span:nth-child(3){
+    transform:rotate(-45deg) translate(6px,-6px);
+}
+
+/* ================= HERO CONTAINER ================= */
+.hero-wrapper{
+    padding:60px 8%;
+}
+
+.hero{
+    background:#08323a;
+    border-radius:60px;
+    padding:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+}
+
+/* Left Content */
+.hero-text{
+    max-width:550px;
+}
+
+.hero-text h1{
+    font-size:55px;
+    margin-bottom:25px;
+}
+
+.hero-text p{
+    line-height:1.7;
+    color:#d3d3d3;
+    margin-bottom:35px;
+}
+
+.buttons{
+    display:flex;
+    gap:25px;
+}
+
+.btn-outline{
+    border:1px solid white;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:black;
+}
+
+.btn-filled{
+    background:#d9d9d9;
+    color:black;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+}
+
+/* Logo Card */
+.logo-card{
+    width:280px;
+    height:280px;
+    background:#052c33;
+    border-radius:35px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 0 60px #00eaff60;
+}
+
+.logo-card h2{
+    font-size:95px;
+    color:#2dd6f5;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media(max-width:1024px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+}
+@media(max-width:320px){
+    .btn-outline{
+    border:1px solid white;
+    padding:8px 4px;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+    width: 120px;
+    font-size: 12px;
+    }
+    .btn-filled{
+    background:#d9d9d9;
+    color:black;
+    padding:8px 4px;
+    border-radius:30px;
+    text-decoration:none;
+    font-size: 12px;
+    width: 80px;
+
+    
+}
+
+
+}
+@media(max-width:500px){
+        .btn-outline{
+    border:1px solid white;
+    padding:8px 4px;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+    width: 120px;
+    font-size: 12px;
+    }
+    .btn-filled{
+    background:#d9d9d9;
+    color:black;
+    padding:8px 4px;
+    border-radius:30px;
+    text-decoration:none;
+    font-size: 12px;
+    width: 80px;
+
+    
+}
+
+
+}
+/* Mobile */
+@media(max-width:768px){
+
+    .nav-links{
+        position:absolute;
+        top:75px;
+        right:8%;
+        flex-direction:column;
+        background:#08323a;
+        padding:25px;
+        border-radius:20px;
+        width:220px;
+        display:none;
+        gap:20px;
+        box-shadow:0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-toggle{
+        display:flex;
+    }
+
+    .sign-btn{
+        display:none;
+    }
+
+    .hero{
+        padding:40px;
+        border-radius:35px;
+    }
+
+    .hero-text h1{
+        font-size:36px;
+    }
+
+    .logo-card{
+        width:200px;
+        height:200px;
+    }
+
+    .logo-card h2{
+        font-size:65px;
+    }
+}
+</style>
+</head>
+<body>
+
+
+<nav>
+    <div class="nav-links" id="navLinks">
+          
+    <a href="home.html">Home</a>
+    <a href="info.html">Info</a>
+    <a href="team.html">Team</a>
+    <a href="projection.html">Projection</a>
+    <a href="engage.html">Engage</a>
+
+
+    </div>
+
+    
+
+    <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+<div class="hero-wrapper">
+    <div class="hero">
+        <div class="hero-text">
+            <h1>ForeNest Uganda</h1>
+            <p>
+                ForeNest Uganda is here to make Ugandan stories meet quality in
+                modern filming, script development, indigenous cultural involvement
+                and career boost in the entertainment industry.
+            </p>
+
+            <div class="buttons">
+                <a href="#" class="btn-outline">Documentation ></a>
+                <a href="#" class="btn-filled">Get started ></a>
+            </div>
+        </div>
+
+        <div class="logo-card">
+            <img src="logo.png" alt="logo" class="logo-card">
+        </div>
+    </div>
+</div>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+});
+</script>
+
+</body>
+</html>
